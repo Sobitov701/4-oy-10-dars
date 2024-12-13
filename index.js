@@ -151,13 +151,15 @@ console.log(sum14);
 //15-misol
 //Berilgan massivning barcha elementlarini kichik harflarga o'zgartirib ekranga chiqaring.
 
+let num15 = ["SALOM", "DUNYO", "DASTUR"];
+
 //16-misol
 //Massivdagi har bir elementni 2 barobar kattalashtirib yangi massivga saqlang.
 
 let num16 = [1, 2, 3, 4];
 
 let sum16 = num16.map(function (value) {
-  value * 2;
+  return value * 2;
 });
 
 console.log(sum16);
@@ -169,7 +171,7 @@ let num17 = [1, 2, 3, 4, 5, 6, 7];
 let sum17 = [];
 
 num17.map(function (value) {
-  sum17.push(value ** 2);
+  return sum17.push(value ** 2);
 });
 
 console.log(sum17);
@@ -186,10 +188,10 @@ console.log(sum18);
 //19-misol
 //Har bir elementdan oxirgi 3 ta belgisini olib yangi massivga saqlang (slice bilan).
 
-let num19 = [1, 2, 3, 4, 5, 6, 7];
+let num19 = ["annas", "behi", "olma", 7];
 
 let sum19 = num19.map(function (value) {
-  String(value).slice(-3);
+  return value.slice(-3);
 });
 
 console.log(sum19);
@@ -200,7 +202,7 @@ console.log(sum19);
 let num20 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum20 = num20.map(function (value) {
-  value.toUpperCase();
+  return value.toUpperCase();
 });
 
 console.log(sum20);
@@ -211,7 +213,7 @@ console.log(sum20);
 let num21 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum21 = num21.map(function (value) {
-  "Hello, " + value;
+  return "Hello, " + value;
 });
 
 console.log(sum21);
@@ -222,7 +224,7 @@ console.log(sum21);
 let num22 = ["a", "b", "c", "d"];
 
 let sum22 = num22.map(function (value) {
-  value + value;
+  return value + value;
 });
 
 console.log(sum22);
@@ -233,7 +235,7 @@ console.log(sum22);
 let num23 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum23 = num23.map(function (value) {
-  value.length;
+  return value.length;
 });
 
 console.log(sum23);
@@ -244,7 +246,7 @@ console.log(sum23);
 let num24 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum24 = num24.map(function (value, index) {
-  value + "-" + index;
+  return value + "-" + index;
 });
 
 console.log(sum24);
@@ -254,8 +256,8 @@ console.log(sum24);
 
 let num25 = ["salom", "dunyo", "javascript", "nodejs"];
 
-let sum25 = num25.map(function (value) {
-  value.split("").reverse().join("");
+let sum25 = num25.map((value) => {
+  return value.split("").reverse().join("");
 });
 
 console.log(sum25);
@@ -266,7 +268,7 @@ console.log(sum25);
 let num26 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let modified = num26.map(function (value) {
-  value.slice(1, -1);
+  return value.slice(1, -1);
 });
 
 console.log(modified);
@@ -286,7 +288,7 @@ console.log(sum27);
 let num28 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum28 = num28.map(function (value) {
-  value.toUpperCase();
+  return value.toUpperCase();
 });
 
 console.log(sum28);
@@ -308,7 +310,7 @@ let sum29 = num29.map(function (value) {
 let num30 = [1, "salom", "dunyo", "javascript", 6, 7];
 
 let sum30 = arr.map(function (value) {
-  Number(value);
+  return Number(value);
 });
 
 console.log(sum30);
@@ -319,7 +321,7 @@ console.log(sum30);
 let num31 = [1, 2, 3, 4, 5, 6, 7, 8];
 
 let sum31 = num31.filter(function (value) {
-  value % 2 !== 0;
+  return value % 2 !== 0;
 });
 
 console.log(sum31);
@@ -330,7 +332,7 @@ console.log(sum31);
 let num32 = [1, -2, 3, -4, 5, -6, 7, -8];
 
 let sum32 = num32.filter(function (value) {
-  value < 0;
+  return value < 0;
 });
 
 console.log(sum32);
@@ -341,7 +343,7 @@ console.log(sum32);
 let num33 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum33 = num33.filter(function (value) {
-  value.includes("a");
+  return value.includes("a");
 });
 
 console.log(sum33);
@@ -352,7 +354,7 @@ console.log(sum33);
 let num34 = ["salom", "dunyo", "javascript", "nodejs"];
 
 let sum34 = num34.filter(function (value) {
-  value.length > 5;
+  return value.length > 5;
 });
 
 console.log(sum34);
@@ -363,7 +365,7 @@ console.log(sum34);
 let num35 = ["apple", "test123", "banana", "testcase", "testing"];
 
 let sum35 = num35.filter(function (value) {
-  value.includes("test");
+  return value.includes("test");
 });
 
 console.log(sum35);
@@ -374,7 +376,7 @@ console.log(sum35);
 let num36 = ["apple", "elppa", "banana", "ananab", "grape", "eparg"];
 
 let sum36 = num36.filter(function (value) {
-  value == value.split("").reverse().join("");
+  return value == value.split("").reverse().join("");
 });
 
 console.log(sum36);
@@ -396,7 +398,7 @@ let sum37 = num37.filter(function (value) {
 let num38 = ["apple", 123, "banana", 456, "grape", 789];
 
 let sum38 = num38.filter(function (value) {
-  typeof value == "number";
+  return Number(value);
 });
 
 console.log(sum38);
@@ -407,7 +409,7 @@ console.log(sum38);
 let num39 = ["apple", "to", "banana", "grape", "big"];
 
 let sum39 = num39.filter(function (value) {
-  value.length < 3;
+  return value.length < 3;
 });
 
 console.log(sum39);
@@ -415,13 +417,23 @@ console.log(sum39);
 //40-misol
 //Berilgan massivdan faqat unli harflardan iborat elementlarni olib yangi massivga saqlang.
 
+let num40 = ["a", "b", "3", "d", "e", "i"];
+
+let result = ["a", "i", "e", "o", "u"];
+
+let sum40 = num40.filter((value) => {
+  return res.includes(value);
+});
+
+console.log(sum40);
+
 //41-misol
 //Faqat boshida "abc" bo‘lgan elementlarni olib yangi massivga saqlang (slice bilan).
 
 let num41 = ["abc123", "abcdef", "xyzabc", "abcde", "mnop"];
 
 let sum41 = num41.filter(function (value) {
-  value.slice(0, 3) == "abc";
+  return value.slice(0, 3) == "abc";
 });
 
 console.log(sum41);
@@ -432,7 +444,7 @@ console.log(sum41);
 let num42 = ["abcxyz", "123xyz", "xyz123", "testxyz", "hello"];
 
 let sum42 = num42.filter(function (value) {
-  value.slice(-3) == "xyz";
+  return value.slice(-3) == "xyz";
 });
 
 console.log(sum42);
@@ -443,7 +455,7 @@ console.log(sum42);
 let num43 = [5, 12, 8, 20, 3, 15];
 
 let sum43 = num43.filter(function (value) {
-  value < 10;
+  return value < 10;
 });
 
 console.log(sum43);
@@ -451,10 +463,29 @@ console.log(sum43);
 //44-misol
 //Faqat "test" so‘zini o‘z ichiga olmagan elementlarni olib yangi massivga saqlang (includes bilan).
 
-let arr = ["apple", "test123", "banana", "testcase", "grape", "testing"];
+let num44 = ["apple", "test123", "banana", "testcase", "grape", "testing"];
 
-let withoutTest = arr.filter(function (value) {
-  !value.includes("test"); // "test" so'zini o'z ichiga olmaydigan elementlarni ajratish
+let sum44 = num44.filter(function (value) {
+  return !value.includes("test");
 });
 
-console.log(withoutTest);
+console.log(sum44);
+
+//45-misol
+//Faqat uzunligi eng uzun bo‘lgan elementlarni olib yangi massivga saqlang.
+
+let arr = ["olma", "anor", "anjir", "gilos"];
+
+let maxLength = arr[0].length;
+
+arr.forEach((value) => {
+  if (value.length > maxLength) {
+    maxLength == value.length;
+  }
+});
+
+let res = arr.filter((value) => {
+  return value.length == maxLength;
+});
+
+console.log(res);
